@@ -1,0 +1,10 @@
+services:
+  conversor-moedas:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: natep20/currency-converter:latest
+    container_name: currency-converter
+    ports:
+      - "8080:80"
+    restart: unless-stopped
