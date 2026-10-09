@@ -1,16 +1,40 @@
-# React + Vite
+# Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Web app to convert amounts between currencies.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite
+- React Router
+- styled-components
+- Nginx (serves the production build in Docker)
 
-## React Compiler
+## Run locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Requires Node.js.
 
-## Expanding the Oxlint configuration
+    npm install
+    npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Other scripts:
+
+    npm run build     # production build
+    npm run preview   # preview the build
+    npm run lint      # run Oxlint
+
+## Run with Docker
+
+    docker compose up --build
+
+Open http://localhost:8080 in your browser.
+
+To stop:
+
+    docker compose down
+
+The image is also published as `natep20/currency-converter`.
+
+## Exchange rates
+
+[Name the API or source used for rates, and whether an API key is needed.]
